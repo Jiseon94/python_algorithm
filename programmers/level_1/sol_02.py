@@ -1,26 +1,27 @@
 
 # 약수 : 1, 2, 3,5, 7, 13
 
-list =[]
 
-def func(n):
+
+def solution(n):
     print('함수 호출')
-    def sol(list):
+    def sol(divisors):
         answer = 0
-        for i in list:
+        for i in divisors:
             answer += i
         print('answer', answer)
         return answer
 
-
+    divisors = []
     for i in range(n):
         if n%(i+1) == 0:
             print(i+1)
-            list.append(i+1)
-    return sol(list)
+            divisors.append(i+1)
 
-func(12)
-print(list)
+    result = sol(divisors)
+    return result
+print(solution(12))
+# print(list)
 # def sol(list):
 #     answer = 0
 #     for i in list:
@@ -59,3 +60,24 @@ print(list)
 # div.append(4)
 # div.append(9)
 # print(div)
+
+def func(n):
+    print('함수 호출')
+    def sol(divisors):
+        answer = 0
+        for i in divisors:
+            answer += i
+        print('answer', answer)
+        return answer
+
+    divisors = []  # 리스트 이름을 변경
+    for i in range(n):
+        if n % (i + 1) == 0:
+            print(i + 1)
+            divisors.append(i + 1)
+
+    result = sol(divisors)  # sol 함수를 호출하고 반환값을 저장
+    return result
+
+# n = 12  # 예제에서는 n을 12로 설정
+print(func(12))
