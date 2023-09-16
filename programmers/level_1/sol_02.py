@@ -61,23 +61,23 @@ print(solution(12))
 # div.append(9)
 # print(div)
 
-def func(n):
-    print('함수 호출')
-    def sol(divisors):
-        answer = 0
-        for i in divisors:
-            answer += i
-        print('answer', answer)
-        return answer
-
-    divisors = []  # 리스트 이름을 변경
-    for i in range(n):
-        if n % (i + 1) == 0:
-            print(i + 1)
-            divisors.append(i + 1)
-
-    result = sol(divisors)  # sol 함수를 호출하고 반환값을 저장
-    return result
-
-# n = 12  # 예제에서는 n을 12로 설정
-print(func(12))
+# def func(n):
+#     print('함수 호출')
+#     def sol(divisors):
+#         answer = 0
+#         for i in divisors:
+#             answer += i
+#         print('answer', answer)
+#         return answer
+#
+#     divisors = []  # 리스트 이름을 변경
+#     for i in range(n):
+#         if n % (i + 1) == 0:
+#             print(i + 1)
+#             divisors.append(i + 1)
+#
+#     result = sol(divisors)  # sol 함수를 호출하고 반환값을 저장
+#     return result
+#
+# # n = 12  # 예제에서는 n을 12로 설정
+# print(func(12))
