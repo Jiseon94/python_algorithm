@@ -1,29 +1,23 @@
 def solution(d, budget):
-    #신청한 금액 총합 확인하기
-    sum = 0
-    for b in d:
-        sum +=b
-        print(sum)
-    print(sum)
-    #전체 예산과 같거나 작다면 d[]개수 뽑으면 됨.
-    #전체 예산보다 많다면, 가장 많은 조합의 합을 찾아야함.
-    if sum > budget:
-        print('예산초과')
-        #최소예산끼리의 조합을 찾는 방법?
-        com = 0
-        while com<=budget:
-            cnt = 0
-            for i in d:
-                print(com)
-                com +=i
-                print(com, budget)
-                cnt +=1
+    com = 0 #최대의 조합
+    answer = 0 #몇 개 부서까지 지원가능한지
+    b = d
+    b.sort()
+    for i in b:
+        com += i
+        answer +=1
+        print('c:', answer, 'com:', com)
+        if com > budget:
+            print('초과')
+            answer -= 1
+            print(answer)
             break
-    answer = 0
-    print(cnt)
+        elif com == budget:
+            print('같다:', answer)
+            break
     return answer
 
-d = [1,3,2,5,4]
-budget = 9
-print(solution(d,budget))
-
+d = [2000,2,3,3]
+budget = 10
+# print(solution(d,budget))
+solution(d,budget)
