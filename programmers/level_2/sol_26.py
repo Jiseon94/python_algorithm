@@ -1,10 +1,25 @@
-def solution():
-    answer = True
+#경우의 수
+#False : )로 시작. (로 끝.
+# ( : 1
+# ) : -1
+# 인덱싱?
 
-    # [실행] 버튼을 누르면 출력 값을 볼 수 있습니다.
-    print('Hello Python')
+
+def solution(s):
+    s.match('\(', 1, 1)
+    print(s)
+
+    answer = True
 
     return True
 
-solution()
-s = 123
+s = "(())()"
+solution(s)
+
+# 11 -1 -1 1 -1 = 0
+# "(()("
+# 0010
+# ")()("
+# -1 1 -1 1 =0
+# "()()"
+# 0101
