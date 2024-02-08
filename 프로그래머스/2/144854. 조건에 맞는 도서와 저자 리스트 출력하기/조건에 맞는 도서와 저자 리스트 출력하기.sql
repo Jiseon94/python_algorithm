@@ -14,4 +14,3 @@ from book B, author A
 where B.AUTHOR_ID = A.AUTHOR_ID
 and category = '경제'
 order by PUBLISHED_DATE;
-
