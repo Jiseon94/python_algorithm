@@ -1,0 +1,19 @@
+def sol(events) :
+	
+	events.sort(key=lambda x: x[1])
+	
+	cnt = 0
+	last_end_time = 0
+	
+	for event in events:
+		if event[0] > last_end_time:
+			cnt+=1
+			last_end_time = event[1]
+	
+	return cnt
+	
+N = int(input())
+events = [tuple(map(int, input().split())) for _ in range(N)]
+# print (N)
+# print (events)
+print(sol(events))
