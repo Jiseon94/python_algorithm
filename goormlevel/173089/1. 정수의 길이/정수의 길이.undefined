@@ -1,0 +1,9 @@
+# -*- coding: utf-8 -*-
+# UTF-8 encoding when using korean
+a = input()
+cnt = 0
+for i in a: 
+	cnt+=1
+
+	
+print (cnt)
