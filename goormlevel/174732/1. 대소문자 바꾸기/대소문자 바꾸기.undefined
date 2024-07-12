@@ -1,0 +1,19 @@
+def sol(S) : 
+	answer = ""
+	
+	# 대소문자 검증
+	for i in S :
+		# print(i)
+		if i.isupper() :
+			answer += i.lower()
+			
+		else :
+			answer += i.upper()
+			
+	return answer
+	
+N = input()
+S = input()
+# print(N)
+# print(S)
+print(sol(S))
