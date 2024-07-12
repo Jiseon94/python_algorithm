@@ -1,0 +1,8 @@
+def sol(A, B) :
+	answer = A + B
+	
+	return answer
+
+A, B = map(int, input().split())
+# print(A, B)
+print(sol(A, B))
