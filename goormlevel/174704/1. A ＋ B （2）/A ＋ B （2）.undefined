@@ -1,0 +1,9 @@
+def sol(A, B) :
+	answer = A + B
+	answer = format(answer, '.6f')
+
+	return answer
+
+A, B = map(float, input().split())
+# print(A, B)
+print(sol(A, B))
