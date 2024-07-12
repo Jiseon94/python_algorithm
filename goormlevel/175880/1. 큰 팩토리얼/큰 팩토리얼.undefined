@@ -1,0 +1,12 @@
+import math
+
+def sol(N) :
+	F = math.factorial(N)
+	res = F % 1000000007
+	
+	return res
+
+N = int(input().strip())
+
+# print(N)
+print(sol(N))
