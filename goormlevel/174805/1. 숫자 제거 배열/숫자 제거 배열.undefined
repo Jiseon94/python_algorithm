@@ -1,0 +1,23 @@
+def sol(K, a) :
+	cnt = 0
+	
+	for i in a :
+		
+		if K in i :
+			pass
+		
+		else :
+			cnt += 1
+		
+	
+	return cnt
+	
+	
+
+N, K = input().split()
+# print(N)
+# print(K)
+a = input().split()
+# print(a)
+
+print(sol(K, a))
